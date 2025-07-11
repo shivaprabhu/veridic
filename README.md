@@ -19,3 +19,53 @@ Veridic is a CLI-first compliance tool for engineers and startups. It pulls real
 
 ```bash
 curl -sSL https://veridic.io/install.sh | bash
+```
+---
+
+## 🚀 Quickstart
+
+```bash
+veridic init --framework soc2 --cloud aws
+veridic check
+veridic report --summary
+veridic export --format pdf
+```
+Or define everything in `veridic.yaml`:
+
+```yaml
+framework: soc2
+cloud: aws
+account: prod
+controls:
+  - AC-2
+  - AC-6
+  - CM-2
+```
+
+---
+
+### 📋 Supported Frameworks (WIP)
+
+  - [ ] SOC2
+
+  - [ ] ISO 27001
+
+  - [ ] HIPAA
+
+  - [ ] NIST 800-53
+
+---
+
+---
+
+### 📤 Outputs
+
+  - `veridic-report.md` - human-readable control report
+
+  - `evidence.json` - structured data for export or ingestion
+
+  - `screenshots/` - auto-generated console screenshots (optional)
+
+  - `audit-ready.zip` - shareable bundle for auditors
+
+---
