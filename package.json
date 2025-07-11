@@ -1,12 +1,16 @@
 {
   "name": "veridic",
   "version": "1.0.0",
-  "description": "",
+  "description": "Veridic is a CLI-first compliance tool for engineers and startups. It pulls real-time configuration data from your cloud environments and maps it to controls from frameworks like SOC2 and ISO27001. No more screenshots, spreadsheets, or stale policies - just evidence you can trust.",
   "license": "ISC",
   "author": "prabhu.wali@gmail.com",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.0"
   }
 }
