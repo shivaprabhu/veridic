@@ -18,14 +18,14 @@ import { checkCloudWatchAlarms } from "./service-checks/cloudwatch-alarms.js";
 import { checkInfrastructureViaIac } from "./service-checks/infra-via-iac.js";
 import { checkAnomalyMonitorExists } from "./service-checks/anomoly-detection-monitor-check.js";
 
-import { checkDailyCostThreshold } from './billing/daily-cost-threshold.js';
-import { checkWeeklyCostExplorerReport } from './billing/weekly-cost-explorer-report.js';
-import { checkTagCompliance } from "./billing/tag-compliance.js";
-import { checkIdleResourceCleanup } from "./billing/check-idle-resource-cleanup.js";
-import { checkReservedInstanceRecommendation } from "./billing/reserve-instance-purchase-recommendation.js";
-import { checkMonthlyBudgetThreshold } from "./billing/monthly-budget-threshold.js";
-import { checkCostExplorerEnabled } from "./billing/cost-explorer-enabled.js";
-import { checkBudgetExists } from "./billing/budget-exists-check.js";
+import { checkDailyCostThreshold } from './billing-checks/daily-cost-threshold.js';
+import { checkWeeklyCostExplorerReport } from './billing-checks/weekly-cost-explorer-report.js';
+import { checkTagCompliance } from "./billing-checks/tag-compliance.js";
+import { checkIdleResourceCleanup } from "./billing-checks/check-idle-resource-cleanup.js";
+import { checkReservedInstanceRecommendation } from "./billing-checks/reserve-instance-purchase-recommendation.js";
+import { checkMonthlyBudgetThreshold } from "./billing-checks/monthly-budget-threshold.js";
+import { checkCostExplorerEnabled } from "./billing-checks/cost-explorer-enabled.js";
+import { checkBudgetExists } from "./billing-checks/budget-exists-check.js";
 
 const runServiceChecks = async () => {
   const iamMfaEnabled = await checkMFAEnabled();
